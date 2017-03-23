@@ -16,7 +16,7 @@ public class StoreService {
 	// private static final Distance distance = new Distance(50,
 	// Metrics.KILOMETERS);
 	@Autowired
-	private StoreRepository storeRepository;
+	private StoreRepository storeRepository;s
 
 //	public List<Store> getStore(int storeNumber) {
 //		LOGGER.info("get by store number service" + storeNumber);
@@ -36,9 +36,9 @@ public class StoreService {
 		return storeRepository.findByProvince(province);
 	}
 
-	public Store getStoreById(int id) {
+	public Store getStoreById(String id) {
 
-		return storeRepository.findOne(Integer.toString(id));
+		return storeRepository.findOne(id);
 	}
 
 }
