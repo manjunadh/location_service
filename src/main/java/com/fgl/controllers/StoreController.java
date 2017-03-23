@@ -19,10 +19,10 @@ public class StoreController {
 	@Autowired
 	private StoreService storeService;
 
-	@Bean
-	StoreService storeService() {
-		return new StoreService();
-	}
+//	@Bean
+//	StoreService storeService() {
+//		return new StoreService();
+//	}
 
 	// single store
 	@RequestMapping("/location/{storeNumber}")
