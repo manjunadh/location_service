@@ -44,11 +44,11 @@ public class StoreServiceImpl implements StoreService {
 		return storeRepository.findByProvince(province);
 	}
 
-	@Override
-	public List<Store> getAllStoresNearby(String storeNumber) {
-		Store store = storeRepository.findOne(storeNumber);
-		return storeRepository.findByPointNear(store.getLocation(), distance);
-
-	}
+//	@Override
+//	public List<Store> getAllStoresNearby(String storeNumber) {
+//		Store store = storeRepository.findOne(storeNumber);
+//		return storeRepository.findByPointNear(store.getLocation(), distance);
+//
+//	}
 
 }

@@ -46,7 +46,7 @@ public class StoreInitializer {
 			}
 			Store store = new Store(stores.next().getStoreNumber(), stores.next().getName(), stores.next().getAddress(),
 					stores.next().getCity(), stores.next().getProvince(), stores.next().getLongitude(),
-					stores.next().getLatitude(), point);
+					stores.next().getLatitude());
 			storesList.add(store);
 		}
 

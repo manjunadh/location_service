@@ -12,6 +12,6 @@ public interface StoreRepository extends CrudRepository<Store, String> {
 
 	List<Store> findByProvince(@Param("province") String province);
 
-	List<Store> findByPointNear(@Param("location") Point location, @Param("distance") Distance distance);
+//	List<Store> findByPointNear(@Param("location") Point location, @Param("distance") Distance distance);
 
 }

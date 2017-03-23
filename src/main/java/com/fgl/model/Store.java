@@ -8,9 +8,9 @@ import javax.persistence.Table;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import javax.persistence.Entity;
 import org.springframework.data.mongodb.core.mapping.Document;
-@Document
-//@Entity
-//@Table(name = "store")
+//@Document
+@Entity
+@Table(name = "stores")
 public class Store {
 	@Id
 	private String storeNumber;
@@ -20,11 +20,11 @@ public class Store {
 	private String province;
 	private String longitude;
 	private String latitude;
-	@GeoSpatialIndexed(type = GeoSpatialIndexType.GEO_2DSPHERE)
-	Point location;
+//	@GeoSpatialIndexed(type = GeoSpatialIndexType.GEO_2DSPHERE)
+//	Point location;
 	public Store(){}
 	public Store(String storeNumber, String name, String address, String city, String province, String longitude,
-			String latitude, Point location) {
+			String latitude) {
 		super();
 		this.storeNumber = storeNumber;
 		this.name = name;
@@ -33,7 +33,7 @@ public class Store {
 		this.province = province;
 		this.longitude = longitude;
 		this.latitude = latitude;
-		this.location = location;
+		
 	}
 	public String getStoreNumber() {
 		return storeNumber;
@@ -77,11 +77,6 @@ public class Store {
 	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
-	public Point getLocation() {
-		return location;
-	}
-	public void setLocation(Point location) {
-		this.location = location;
-	}
+
 	
 }

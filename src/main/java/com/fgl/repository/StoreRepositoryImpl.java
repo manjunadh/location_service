@@ -81,10 +81,10 @@ public class StoreRepositoryImpl implements StoreRepository{
 		return null;
 	}
 
-	@Override
-	public List<Store> findByPointNear(Point location, Distance distance) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public List<Store> findByPointNear(Point location, Distance distance) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 }
