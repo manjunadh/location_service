@@ -31,13 +31,13 @@ public class StoreController {
 
 	}
 
-	// single store
-	@RequestMapping("/location/{storeNumber}")
-	public List<Store> getStore(@PathVariable int storeNumber) {
-		LOGGER.info("hitting /location/" + storeNumber + " controller");
-		return storeService.getStore(storeNumber);
-
-	}
+//	// single store
+//	@RequestMapping("/location/{storeNumber}")
+//	public List<Store> getStore(@PathVariable int storeNumber) {
+//		LOGGER.info("hitting /location/" + storeNumber + " controller");
+//		return storeService.getStore(storeNumber);
+//
+//	}
 
 	@RequestMapping("/")
 	public String home() {

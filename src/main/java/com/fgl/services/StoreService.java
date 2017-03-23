@@ -18,10 +18,10 @@ public class StoreService {
 	@Autowired
 	private StoreRepository storeRepository;
 
-	public List<Store> getStore(int storeNumber) {
-		LOGGER.info("get by store number service" + storeNumber);
-		return storeRepository.findByStoreNumber(storeNumber);
-	}
+//	public List<Store> getStore(int storeNumber) {
+//		LOGGER.info("get by store number service" + storeNumber);
+//		return storeRepository.findByStoreNumber(storeNumber);
+//	}
 
 	public List<Store> getAllStores() {
 		LOGGER.info("get all stores service");
