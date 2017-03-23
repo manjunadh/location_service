@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Table(name = "stores")
 public class Store {
 	@Id
+	private int id;
 	private String storeNumber;
 	private String name;
 	private String address;
@@ -15,12 +16,12 @@ public class Store {
 	private String province;
 	private String longitude;
 	private String latitude;
-//	@GeoSpatialIndexed(type = GeoSpatialIndexType.GEO_2DSPHERE)
-//	Point location;
+
 	public Store(){}
-	public Store(String storeNumber, String name, String address, String city, String province, String longitude,
+	public Store(int id,String storeNumber, String name, String address, String city, String province, String longitude,
 			String latitude) {
 		super();
+		this.id= id;
 		this.storeNumber = storeNumber;
 		this.name = name;
 		this.address = address;
@@ -29,6 +30,12 @@ public class Store {
 		this.longitude = longitude;
 		this.latitude = latitude;
 		
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getStoreNumber() {
 		return storeNumber;

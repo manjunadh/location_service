@@ -24,12 +24,18 @@ public class StoreController {
 		return new StoreService();
 	}
 
+	@RequestMapping("/locations/{id}")
+	public Store getStorebyId(@PathVariable String id) {
+		LOGGER.info("hitting /location/" + id + " controller");
+		return storeService.getStoreById(id);
+
+	}
+
 	// single store
 	@RequestMapping("/location/{storeNumber}")
-	public Store getStore(@PathVariable String storeNumber) {
+	public List<Store> getStore(@PathVariable String storeNumber) {
 		LOGGER.info("hitting /location/" + storeNumber + " controller");
-		Store store = storeService.getStore(storeNumber);
-		return store;
+		return storeService.getStore(storeNumber);
 
 	}
 

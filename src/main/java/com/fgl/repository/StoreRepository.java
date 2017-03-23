@@ -10,7 +10,7 @@ import com.fgl.model.Store;
 public interface StoreRepository extends CrudRepository<Store, String> {
 
 	List<Store> findByProvince(@Param("province") String province);
-
+	List<Store> findByStoreNumber(@Param("province") String storeNumber);
 //	List<Store> findByPointNear(@Param("location") Point location, @Param("distance") Distance distance);
 
 }
