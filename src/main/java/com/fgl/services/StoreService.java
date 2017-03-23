@@ -16,7 +16,7 @@ public class StoreService {
 	// private static final Distance distance = new Distance(50,
 	// Metrics.KILOMETERS);
 	@Autowired
-	private StoreRepository storeRepository;s
+	private StoreRepository storeRepository;
 
 //	public List<Store> getStore(int storeNumber) {
 //		LOGGER.info("get by store number service" + storeNumber);
