@@ -25,7 +25,7 @@ public class StoreController {
 	}
 
 	@RequestMapping("/locations/{id}")
-	public Store getStorebyId(@PathVariable String id) {
+	public Store getStorebyId(@PathVariable int id) {
 		LOGGER.info("hitting /location/" + id + " controller");
 		return storeService.getStoreById(id);
 
@@ -33,7 +33,7 @@ public class StoreController {
 
 	// single store
 	@RequestMapping("/location/{storeNumber}")
-	public List<Store> getStore(@PathVariable String storeNumber) {
+	public List<Store> getStore(@PathVariable int storeNumber) {
 		LOGGER.info("hitting /location/" + storeNumber + " controller");
 		return storeService.getStore(storeNumber);
 

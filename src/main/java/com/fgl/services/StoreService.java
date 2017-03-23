@@ -18,7 +18,7 @@ public class StoreService {
 	@Autowired
 	private StoreRepository storeRepository;
 
-	public List<Store> getStore(String storeNumber) {
+	public List<Store> getStore(int storeNumber) {
 		LOGGER.info("get by store number service" + storeNumber);
 		return storeRepository.findByStoreNumber(storeNumber);
 	}
@@ -36,9 +36,9 @@ public class StoreService {
 		return storeRepository.findByProvince(province);
 	}
 
-	public Store getStoreById(String id) {
+	public Store getStoreById(int id) {
 
-		return storeRepository.findOne(id);
+		return storeRepository.findOne(Integer.toString(id));
 	}
 
 }
