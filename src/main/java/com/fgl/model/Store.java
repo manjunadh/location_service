@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Store {
 	@Id
 	private String id;
-	private String storeNo;
+	private String store;
 	private String address;
 	private String city;
 	private String province;
@@ -20,11 +20,11 @@ public class Store {
 	public Store() {
 	}
 
-	public Store(String id, String storeNo, String address, String city, String province, String longitude,
+	public Store(String id, String store, String address, String city, String province, String longitude,
 			String latitude) {
 		super();
 		this.id = id;
-		this.storeNo = storeNo;
+		this.store = store;
 
 		this.address = address;
 		this.city = city;
@@ -41,12 +41,14 @@ public class Store {
 		this.id = id;
 	}
 
-	public String getStoreNo() {
-		return storeNo;
+	
+
+	public String getStore() {
+		return store;
 	}
 
-	public void setStoreNo(String storeNo) {
-		this.storeNo = storeNo;
+	public void setStore(String store) {
+		this.store = store;
 	}
 
 	public String getAddress() {
