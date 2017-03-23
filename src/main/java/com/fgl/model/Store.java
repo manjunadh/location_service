@@ -1,13 +1,8 @@
 package com.fgl.model;
 
-import javax.persistence.Id;
-
-import org.springframework.data.geo.Point;
-import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
-import javax.persistence.Table;
-import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import javax.persistence.Entity;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Id;
+import javax.persistence.Table;
 //@Document
 @Entity
 @Table(name = "stores")
